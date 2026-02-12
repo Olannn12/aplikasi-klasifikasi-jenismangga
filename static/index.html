@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klasifikasi Mangga - Deep Learning</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">Klasifikasi Mangga</h1>
+          <p class="tagline">
+            Identifikasi Varietas Mangga dengan Deep Learning
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <!-- Upload Section -->
+        <section class="upload-section">
+          <div class="upload-card">
+            <h2 class="section-title">Upload Gambar Mangga</h2>
+            <p class="section-description">
+              Upload foto mangga untuk mengetahui varietasnya
+            </p>
+
+            <!-- Upload Area -->
+            <div class="upload-area" id="uploadArea">
+              <svg
+                class="upload-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+              <p class="upload-text">
+                <span class="upload-text-bold">Klik untuk upload</span>
+                atau drag & drop
+              </p>
+              <p class="upload-hint">PNG, JPG atau JPEG (Max. 10MB)</p>
+              <input type="file" id="fileInput" accept="image/*" hidden />
+            </div>
+
+            <!-- Preview Area -->
+            <div class="preview-area" id="previewArea" style="display: none">
+              <img id="previewImage" alt="Preview" />
+              <button class="btn-remove" id="removeBtn"> Hapus</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+              <button class="btn btn-primary" id="predictBtn" disabled>
+                <span id="btnText">Klasifikasi Mangga</span>
+                <span
+                  id="btnLoader"
+                  class="loader"
+                  style="display: none"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        <section
+          class="results-section"
+          id="resultsSection"
+          style="display: none"
+        >
+          <div class="results-card">
+            <h2 class="section-title">Hasil Klasifikasi</h2>
+
+            <!-- Main Result -->
+            <div class="main-result">
+              <div class="result-icon"></div>
+              <h3 class="result-class" id="resultClass">-</h3>
+              <div class="confidence-badge" id="confidenceBadge">
+                <span id="confidenceValue">0</span>%
+              </div>
+            </div>
+
+            <!-- Top 3 Predictions -->
+            <div class="predictions-list">
+              <h4 class="predictions-title">Top 3 Prediksi:</h4>
+              <div id="top3List"></div>
+            </div>
+
+            <!-- All Probabilities -->
+            <div class="probabilities-section">
+              <h4 class="predictions-title">Semua Probabilitas:</h4>
+              <div id="allProbabilities"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-icon"></div>
+
+        <!-- Supported Classes -->
+        <section class="classes-section">
+          <h2 class="section-title">Varietas yang Didukung</h2>
+          <div class="classes-grid">
+            <div class="class-item">
+              <span>Mangga Apel</span>
+            </div>
+            <div class="class-item">
+              <span>Mangga Gedong Gincu</span>
+            </div>
+            <div class="class-item">
+              <span>Mangga Golek</span>
+            </div>
+            <div class="class-item">
+              
+              <span>Mangga Harum Manis</span>
+            </div>
+            <div class="class-item">
+              
+              <span>Mangga Indramayu</span>
+            </div>
+            <div class="class-item">
+              
+              <span>Mangga Madu</span>
+            </div>
+            <div class="class-item">
+              
+              <span>Mangga Manalagi</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Klasifikasi Mangga - Skripsi</p>
+        <p>Universitas Bumigora | Computer Science</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js"></script>
+  </body>
+</html>
